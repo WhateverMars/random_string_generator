@@ -13,3 +13,7 @@ This gives the factorial of any given positive integer which it takes as the onl
 ## factors.py
 
 This generates a list of factors for any given positive integer.
+
+## factor_pairs.py
+
+This generates a list of factors of a given integer similarly to factors.py but instead lists the corresponding factor pairs in the format 'factor1 x factor2'
