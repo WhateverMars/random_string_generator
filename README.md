@@ -9,3 +9,7 @@ This creates a random string of letters, mixing capitlised and uncapitalised. Th
 ## factorial.py
 
 This gives the factorial of any given positive integer which it takes as the only input.
+
+## factors.py
+
+This generates a list of factors for any given positive integer.
