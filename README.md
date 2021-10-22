@@ -17,3 +17,7 @@ This generates a list of factors for any given positive integer.
 ## factor_pairs.py
 
 This generates a list of factors of a given integer similarly to factors.py but instead lists the corresponding factor pairs in the format 'factor1 x factor2'
+
+## word_counter.py
+
+This short simple program counts words in a given string. I use it in command line to quickly see how long any document or paragraph is. 
