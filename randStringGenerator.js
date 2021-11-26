@@ -1,42 +1,33 @@
-let min = 0;
-let max = 10;
-let length = 10;
-let i = 0;
-    
-let generatedNumber = Math.floor(Math.random() * max) + min;
-    
+
+// this fn generates a character which can only be a lower case letter
 function generatedChar(){
     return Math.floor(Math.random() * 26) + 97;
 } 
     
+// this fn generates a string of given length using the above char generator
 function generatedString(length){
 
     let generatedString = [];
-    
-    for(i =0; i<length; i++){
+    let i = 0;
+    for(i = 0; i<length; i++){
+
         let new_char = generatedChar();
         
         generatedString.push(String.fromCharCode(new_char));
         
     }
 
+    // this converts the array into a string
     let word = generatedString.join('');
-    
-    
-    console.log(word);
+
     return word
 }
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    console.log('DOMLoaded')
-    document.querySelector('#goBtn').addEventListener('click', () => {
-        console.log('Submitted')
+    document.onkeyup = () => {
         let stringLength = document.querySelector('#stringLength').value
-        console.log(stringLength)
-    
         document.querySelector('#result').innerHTML = generatedString(stringLength)
-
-    }) 
+    }
 })
