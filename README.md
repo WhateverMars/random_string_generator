@@ -4,7 +4,7 @@ This folder contains short codes I've written that are used in my other projects
 
 ## rand_str_gen.py
 
-This creates a random string of letters, mixing capitlised and uncapitalised. The function takes the size of the string desired.
+This creates a random string of letters, mixing capitlised and uncapitalised. The function takes the size of the string desired as input.
 
 ## factorial.py
 
@@ -21,3 +21,7 @@ This generates a list of factors of a given integer similarly to factors.py but 
 ## word_counter.py
 
 This short simple program counts words in a given string. I use it in command line to quickly see how long any document or paragraph is. 
+
+## randStringGenerator.html and randStringGenerator.js
+
+This is functional the same as rand_str_gen.py but in javascript. The html page allows the user to input the desired length of string and then it returns a randomly generated string below the input.
