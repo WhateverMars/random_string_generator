@@ -24,4 +24,4 @@ This short simple program counts words in a given string. I use it in command li
 
 ## randStringGenerator.html and randStringGenerator.js
 
-This is functionally the same as rand_str_gen.py but in javascript. The html page allows the user to input the desired length of string and then it returns a randomly generated string below the input. It also allows the user to tick a box to include spaces in the outputted string to effectively give a paragraph out put. The chance of a char being a space is 1 in 6.
+This is functionally the same as rand_str_gen.py but in javascript. The html page allows the user to input the desired length of string and then it returns a randomly generated string below the input. It also allows the user to tick a box to include spaces in the outputted string to effectively give a paragraph output. The chance of a char being a space is 1 in 6.
