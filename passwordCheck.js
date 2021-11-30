@@ -21,31 +21,31 @@ function checkPassword(password){
         }
     }
 
-    let ReqLen = document.querySelector('#ReqLen').style;
-    let ReqUpper = document.querySelector('#ReqUpper').style;
-    let ReqLower = document.querySelector('#ReqLower').style;
+    let ReqLen = document.querySelector('#ReqLen');
+    let ReqUpper = document.querySelector('#ReqUpper');
+    let ReqLower = document.querySelector('#ReqLower');
 
     if (!hasLower){
-        ReqLower.display = 'block';
+        ReqLower.hidden = false;
     }else{
-        ReqLower.display = 'none'
+        ReqLower.hidden = true;
     }
 
     if(!hasUpper){
-        ReqUpper.display = 'block';
+        ReqUpper.hidden = false;
     }else{
-        ReqUpper.display = 'none'
+        ReqUpper.hidden = true;
     }
 
     if(password.length < 8){
-        ReqLen.display = 'block';
+        ReqLen.hidden = false;
     }else{
-        ReqLen.display = 'none'
+        ReqLen.hidden = true;
     }
     
     if(hasUpper && hasLower && password.length >= 8){
 
-        console.log('password is good')
+        //console.log('password is good')
         return 1
     }else{
         return 0
@@ -55,6 +55,8 @@ function checkPassword(password){
 document.addEventListener('DOMContentLoaded',() => {
 
     console.log(document.title)
+
+    // disable reqister button
     document.querySelector('#registerBtn').disabled = 'true'
     
     document.querySelector('#password').onkeyup = () => {
@@ -65,12 +67,20 @@ document.addEventListener('DOMContentLoaded',() => {
     }
 
     document.querySelector('#confirmation').onkeyup = () => {
+
         if(document.querySelector('#username') != '' && checkPassword(document.querySelector('#password').value) && document.querySelector('#confirmation').value == document.querySelector('#password').value){
+            
             document.querySelector('#registerBtn').disabled = false
+            document.querySelector('#ReqMatch').hidden = true
             
             console.log('ready to submit')
-        }
+        }else{
 
+            document.querySelector('#ReqMatch').hidden = false
+            document.querySelector('#registerBtn').disabled = true
+            
+        }
     }
+    
 
 })
