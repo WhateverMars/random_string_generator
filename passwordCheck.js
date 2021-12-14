@@ -58,6 +58,22 @@ document.addEventListener('DOMContentLoaded',() => {
 
     // disable reqister button
     document.querySelector('#registerBtn').disabled = 'true'
+
+    document.querySelector('#password').disabled = true
+
+    document.querySelector('#confirmation').disabled = true
+
+    document.onkeyup = () => {
+
+        if(document.querySelector('#username').value != ''){
+            document.querySelector('#password').disabled = false
+        }
+
+        if(document.querySelector('#password').value.length >= 8){
+            document.querySelector('#confirmation').disabled = false
+        }
+
+    }
     
     document.querySelector('#password').onkeyup = () => {
 
@@ -68,7 +84,7 @@ document.addEventListener('DOMContentLoaded',() => {
 
     document.querySelector('#confirmation').onkeyup = () => {
 
-        if(document.querySelector('#username') != '' && checkPassword(document.querySelector('#password').value) && document.querySelector('#confirmation').value == document.querySelector('#password').value){
+        if(document.querySelector('#username').value != '' && checkPassword(document.querySelector('#password').value) && document.querySelector('#confirmation').value == document.querySelector('#password').value){
             
             document.querySelector('#registerBtn').disabled = false
             document.querySelector('#ReqMatch').hidden = true
