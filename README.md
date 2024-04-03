@@ -20,7 +20,7 @@ This generates a list of factors of a given integer similarly to factors.py but 
 
 ## word_counter.py
 
-This short simple program counts words in a given string. I use it in command line to quickly see how long any document or paragraph is. 
+This short simple program counts words in a given string. I use it in command line to quickly see how long any document or paragraph is.
 
 ## randStringGenerator.html and randStringGenerator.js
 
